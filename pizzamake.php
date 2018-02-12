@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!isset($_SESSION['user_id']))
+{
+	header("location: index.php");
+}
 require ("db_config.php");
 require ("config.php");
 require ("functions.php");

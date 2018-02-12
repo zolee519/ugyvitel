@@ -39,7 +39,7 @@ if(!isset($_SESSION['worker_id']))
   		};
   		xhttp.open("GET", "admin.php", true);
 		xhttp.send();
-		}, 4000);
+		}, 2000);
 		};
 	</script>
 	<div>

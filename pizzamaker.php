@@ -51,7 +51,7 @@
 				ev.preventDefault();
 			    var data = ev.dataTransfer.getData("text");
 			}
-			else(typeof(ev) == "string")
+			else
 			{
 				var data = ev;
 			}

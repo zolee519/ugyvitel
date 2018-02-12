@@ -2,15 +2,10 @@
 require "db_config.php";
 
 session_start();
-$username = $_SESSION['username'];
+$user_id = $_SESSION['user_id'];
 
-$sql = "SELECT user_id FROM user WHERE username = '$username'";
+$sql = "SELECT user_id FROM user WHERE user_id = $user_id";
 $eredmeny = mysqli_query($connection, $sql);
-
-while ($row = mysqli_fetch_array($eredmeny))
-{
-    $user_id = $row['user_id'];
-}
 
 $error = [];
 if(isset($_POST)){

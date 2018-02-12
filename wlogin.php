@@ -33,20 +33,20 @@ if(LoginCounter(getIP())<10)
         else{
             
             insertLoginAttempt(getIP(),$_SERVER['HTTP_USER_AGENT']);
-            header('location:index.php?error=1');
+            header('location:adminlogin.php?error=1');
             mysqli_close($connection);
             exit;
         }
     }
     else{
         insertLoginAttempt(getIP(),$_SERVER['HTTP_USER_AGENT']);
-        header('location:index.php?error=2');
+        header('location:adminlogin.php?error=2');
         mysqli_close($connection);
         exit;
     }
 }
 else{
-        header('location:index.php?error=3');
+        header('location:adminlogin.php?error=3');
         mysqli_close($connection);
         exit;
 }
