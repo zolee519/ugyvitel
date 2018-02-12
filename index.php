@@ -57,7 +57,7 @@ $try=LoginCounter(getIP());?>
 				}
 			?>
 			<img src="img/orderfast.png" alt="orderfast"><br><br>
-			Sed ultricies tristique metus porttitor aliquam. Donec id metus ac ante ullamcorper congue nec eu mauris. Ut in facilisis dolor, sed porttitor turpis. Ut ac nulla massa. Donec quis risus sodales, sagittis odio at, consequat tortor. Vivamus elementum mauris metus, id cursus nunc lacinia sit amet. Cras sit amet nulla ornare, mollis sem a, fermentum tellus. Aenean at condimentum est, vel aliquam massa. Suspendisse laoreet ultricies velit, sed consectetur lacus scelerisque eget. Integer ac erat eget dui mollis molestie ut eget diam. Vivamus nisl elit, convallis id mollis ut, placerat sed orci. Sed lacinia nisi ullamcorper urna scelerisque, sed iaculis nisi laoreet.<br><br><hr>
+			Sed ultricies tristique metus porttitor aliquam. Donec id metus ac ante ullamcorper congue nec eu mauris. Ut in facilisis dolor, sed porttitor turpis. Ut ac nulla massa. Donec quis risus sodales, sagittis odio at, consequat tortor. Vivamus elementum mauris metus, id cursus nunc lacinia sit amet. Cras sit amet nulla ornare, mollis sem a, fermentum tellus. Aenean at condimentum est, vel aliquam massa. Suspendisse laoreet et ultricies velit, sed consectetur lacus scelerisque eget. Integer ac erat eget dui mollis molestie ut eget diam. Vivamus nisl elit, convallis id mollis ut, placerat sed orci. Sed lacinia nisi ullamcorper urna scelerisque, sed iaculis nisi laoreet.<br><br><hr>
 		</div>
 	<div class="footer">Doszkocs Zoltán 2017 All Rights Reserved</div>
 </div>
