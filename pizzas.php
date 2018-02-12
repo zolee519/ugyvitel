@@ -27,8 +27,7 @@ $try=LoginCounter(getIP());?>
 			<?php 
 				if(isset($_SESSION['user_id']))
 				{
-					echo '<a href="pizzamake.php">Pizza készítő</a><br>';
-					echo '<a href="logout.php">Kijelentkezés</a>';
+					include ("menu.php");
 				}
 				else
 				{
