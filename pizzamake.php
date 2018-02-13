@@ -136,7 +136,6 @@ $try=LoginCounter(getIP());?>
 					</td>
 				</tr>
 			</table>
-			<p class="advise">Are you hungry? Save some time for yourself, and fill every field correctly!</p>
 			<button id="send" onclick="SendOrder()">ORDER</button><br>
 			<input type="text" name="savename" id="savename">
 			<button id "save" onclick="SaveOrder()">SAVE</button>

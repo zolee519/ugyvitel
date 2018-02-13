@@ -1,10 +1,12 @@
 <?php
+
 function insertLoginAttempt($ip,$browser)
 {
 	global $connection;
 	$query="INSERT INTO `loginattempt`(`ip`, `browser`) VALUES ('$ip','$browser')";
 	$result = mysqli_query($connection, $query) or die (mysqli_error($connection));
 }
+
 function getIP(){
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
         $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -16,6 +18,7 @@ function getIP(){
 
     return $ip;
 }
+
 function LoginCounter($ip)
 {
 	global $connection;
@@ -28,5 +31,24 @@ function LoginCounter($ip)
 
 	return (int)$count[0];
 	
+}
+
+function GetPrilogName($id_string)
+{
+	$names = array();
+	global $connection;
+	$x = explode(' ',$id_string);
+	$y = count($x);
+	for($i=0;$i<$y;$i++)
+	{
+		$id = $x[$i];
+		$query = "SELECT prilog_name_hu FROM prilog WHERE prilog_id = $id";
+		$result = mysqli_query($connection, $query) or die (mysqli_error($connection));
+		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+		array_push($names, $row['prilog_name_hu']);
+
+	}
+	$names2 = implode(',',$names);
+	return $names2;
 }
 ?>

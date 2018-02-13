@@ -26,6 +26,7 @@ if(!isset($_SESSION['worker_id']))
 	<div class="sitebody">
 	<h3 class="centering">ORDERS<h3><br>
 	<div class="centering">
+	<?php GetPrilogName("2 1 4 3 2 6 3 5 2"); ?>
 	<script>
 	function refreshOrders(){
 		document.getElementById("table").innerHTML = '<img src="img/spinner.gif" alt="loading" style="margin: 0 auto;">';

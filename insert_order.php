@@ -2,15 +2,7 @@
 require "db_config.php";
 
 session_start();
-$username = $_SESSION['username'];
-
-$sql = "SELECT user_id FROM user WHERE username = '$username'";
-$eredmeny = mysqli_query($connection, $sql);
-
-while ($row = mysqli_fetch_array($eredmeny))
-{
-    $user_id = $row['user_id'];
-}
+$user_id = $_SESSION['user_id'];
 
 $error = [];
 if(isset($_POST)){
@@ -18,7 +10,7 @@ if(isset($_POST)){
 	if(isset($_POST['prilog'])) 
     {
         $prilog = mysqli_real_escape_string($connection, trim($_POST['prilog']));
-        $prilog2 = substr($prilog, 7);
+        $prilog2 = substr($prilog, 8);
     }
     else
     {
@@ -51,8 +43,8 @@ if(isset($_POST)){
     }
     else
     {
-        $query = "INSERT INTO orders2(order_id,user_id,prilog,quantity,price)
-                  VALUES(order_id,$user_id,'$prilog2',$quantity,$price)";
+
+        $query = "INSERT INTO `orders2`(`order_id`, `user_id`, `prilog`, `quantity`, `price`, `shipped`, `in_progress`) VALUES (order_id,$user_id,'$prilog2',$quantity,$price,0,0)";
     }
 
     $result = mysqli_query($connection,$query);
