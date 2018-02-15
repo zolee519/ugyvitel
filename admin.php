@@ -3,7 +3,7 @@
   require("db_config.php");
   require("functions.php");
 
-  $query = "SELECT orders2.in_progress, orders2.order_id, user.user_id, user.firstname, user.lastname, user.phone, user.address, orders2.prilog, orders2.quantity, orders2.price FROM orders2 INNER JOIN user ON orders2.user_id = user.user_id WHERE orders2.shipped = 0";
+  $query = "SELECT orders2.in_progress, orders2.order_id, user.user_id, user.firstname, user.lastname, user.phone, user.address, orders2.prilog,orders2.size, orders2.quantity, orders2.price FROM orders2 INNER JOIN user ON orders2.user_id = user.user_id WHERE orders2.shipped = 0";
   $myData = mysqli_query($connection, $query);
   var_dump($myData);
   if(mysqli_num_rows($myData)>0)
@@ -15,6 +15,7 @@
     echo "<th>Adress </th>";
     echo "<th>Phone </th>";
     echo "<th>Quantity </th>";
+    echo "<th>Size </th>";
     echo "<th>Price </th> ";
     echo "<th>Ready</th>";
     echo "<th>In progress</th></tr>";
@@ -36,6 +37,7 @@
       echo "<td>" .$row['address'] ."</td>";
       echo "<td>+381" .$row['phone'] ."</td>";
       echo "<td>" .$row['quantity'] ."</td>";
+      echo "<td>" .$row['size']. "</td>";
       echo "<td>" .$row['price'] ."</td>";
       if($row['in_progress'] == 0)
       {

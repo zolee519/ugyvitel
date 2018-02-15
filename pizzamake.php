@@ -124,6 +124,10 @@ $try=LoginCounter(getIP());?>
 			</div>
 		</div>
 		<div class="centering">
+			<input type="radio" name="size" value="M" onclick="changeSize(1)" checked="checked"> M
+  			<input type="radio" name="size" value="L" onclick="changeSize(1.5)"> L
+  			<input type="radio" name="size" value="XL" onclick="changeSize(2)"> XL
+			<input type="radio" name="size" value="XXL" onclick="changeSize(2.5)"> XXL
 			<p id ="showprice">150 Din</p>
 			<p id ="added">Added: (nothing yet)</p>
 			<table class="tablecenter">

@@ -46,9 +46,26 @@ function GetPrilogName($id_string)
 		$result = mysqli_query($connection, $query) or die (mysqli_error($connection));
 		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 		array_push($names, $row['prilog_name_hu']);
+	}
+	return $names;
+}
+
+function GetPrilogPrice($id_string)
+{
+	$prices = array();
+	global $connection;
+	$x = explode(' ',$id_string);
+	$y = count($x);
+	for($i=0;$i<$y;$i++)
+	{
+		$id = $x[$i];
+		$query = "SELECT prilog_price FROM prilog WHERE prilog_id = $id";
+		$result = mysqli_query($connection, $query) or die (mysqli_error($connection));
+		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+		array_push($prices, $row['prilog_price']);
 
 	}
-	$names2 = implode(',',$names);
-	return $names2;
+	$prices2 = implode(',',$prices);
+	return $prices2;
 }
 ?>

@@ -16,7 +16,7 @@
 		echo 'var undocount = 0; 
 		var exists = 0;
 		var loading = false;
-
+		var glob_size = 1;
 		var price = 150;
 
 		var prices = {';
@@ -74,7 +74,7 @@
 
 		    		price = price + prices[data];
 		    		var newvalue = document.getElementById("quantity").value;
-					document.getElementById("showprice").innerHTML = newvalue * price + " Din";
+					document.getElementById("showprice").innerHTML = glob_size * newvalue * price + " Din";
 
 					if(undocount <= ALLPRILOG)
 			    	{
@@ -99,7 +99,7 @@
 		    	document.getElementById(undo[undocount-1]).style.opacity = "0.5";
 		    	price = price - prices[undo[undocount-1]];
 		    	var newvalue = document.getElementById("quantity").value;
-				document.getElementById("showprice").innerHTML =newvalue * price + " Din";
+				document.getElementById("showprice").innerHTML =glob_size * newvalue * price + " Din";
 		    	undo[undocount-1] = "empty";
 		    	undocount--;
 
@@ -109,6 +109,14 @@
 		    	}
 			}
 			updateAddedText();
+		}
+
+		function changeSize(size)
+		{
+			glob_size = size;
+			var newvalue = document.getElementById("quantity").value;
+			document.getElementById("showprice").innerHTML = glob_size * newvalue * price + " Din";			
+
 		}
 
 		function updateAddedText()
@@ -134,7 +142,7 @@
 		function changeQuantity()
 		{
 			var newvalue = document.getElementById("quantity").value;
-			document.getElementById("showprice").innerHTML = newvalue * price + " Din";
+			document.getElementById("showprice").innerHTML = glob_size * newvalue * price + " Din";
 		}
 
 		function SaveOrder()
@@ -183,9 +191,28 @@
 		}
 
 		function SendOrder()
-		{
+		{	
+			var pizzasize = " ";
 			var prilog = document.getElementById("added");
 	        var quantity = document.getElementById("quantity");
+
+	        if(glob_size == 1)
+	        {
+	        	pizzasize = "M";
+	        }
+	        if(glob_size == 1.5)
+	        {
+	        	pizzasize = "L";
+	        }
+	        if(glob_size == 2)
+	        {
+	        	pizzasize = "XL";
+	        }
+	        if(glob_size == 2.5)
+	        {
+	        	pizzasize = "XXL";
+	        }
+
         	var flag = true;
 
         	if(prilog.innerHTML == "Added:")
@@ -218,11 +245,12 @@
                 	{
                     	var text = xmlhttp.responseText;
                     	alert(text);
+                    	alert(price);
                 	}
             	}
             	xmlhttp.open("POST","insert_order.php",true);
             	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-                xmlhttp.send("prilog="+prilog.innerHTML+"&quantity="+quantity.value+"&price="+price*quantity.value);
+                xmlhttp.send("prilog="+prilog.innerHTML+"&quantity="+quantity.value+"&price="+glob_size*price*quantity.value+"&size="+pizzasize);
 
 			}
 		}
