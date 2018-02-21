@@ -30,9 +30,15 @@ body{
 	top: 20px;
 }
 
+.toptext{
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 12px;
+}
 
 ul {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -49,6 +55,7 @@ ul {
 
 li {
     float: left;
+    border-bottom: 3px solid #323639;
 }
 
 li a {
@@ -57,6 +64,10 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+li:hover{
+	border-bottom: 3px solid #fff;
 }
 
 li img {
@@ -144,6 +155,25 @@ li img {
 	text-align:center;
 }
 
+.inactivecontent4{
+	height: 450px;
+	background-color: white;
+	border-top: 10px solid #323639;
+	text-align:center;
+	background-image: url("img/bg2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inactivecontent5{
+	background-color: white;
+	border-top: 10px solid #323639;
+	text-align:center;
+	padding: 20px;
+	padding-top: 0px;
+}
+
 .quotesign{
 	position: absolute;
 	left: 50px;
@@ -187,7 +217,27 @@ li img {
 	background-color: #323639;
 }
 
+.button2{
+	position: absolute;
+	top: 300px;
+	left: 200px;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	font-size: 15px;
+	border: 2px solid #fff;
+	display: inline-block;
+	font-weight: bold;
+	width: 200px;
+}
+
+.button2:hover{
+	color: rgba(0, 0, 0, 0.5);
+	background-color: #fff;
+}
+
 h2{
+	font-family: 'Montserrat', sans-serif;
 	margin: 0px;
 	color: white;
 	background-color: #323639;

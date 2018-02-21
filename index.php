@@ -16,23 +16,26 @@ $try=LoginCounter(getIP());?>
 	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.js"></script>
 </head>
 <body>
 <div class="wrapper">
 	<div class="title">
-		<table style="color: white;">
+		<table class="toptext">
 		<tr>
 			<td style="width: 35%;">
 				<img src="img/logo2.png" alt="logo" width="80%">
 			</td>
 			<td>
-				Ön nincs bejelentkezve. <br>
+				<i class="fas fa-exclamation-circle"></i>&nbsp;Ön nincs bejelentkezve. <br>
 				Ha még nem regisztrált, azt ITT megteheti.
 			</td>
 			<td style="text-align: right;">
-				Telefon: +381621082640 <br>
-				Cím: Ady Endre 44, Szabadka
+				+381621082640&nbsp;<i class="fas fa-phone-square"></i><br>
+				Ady Endre 44, Szabadka&nbsp;<i class="fas fa-map-marker"></i><br>
+				rocketpizza&nbsp;<i class="fab fa-instagram"></i><br>
+				rocketpizzasu&nbsp;<i class="fab fa-facebook-square"></i>
 			</td>
 		</tr>
 		</table>
@@ -111,12 +114,31 @@ $try=LoginCounter(getIP());?>
 			<img src="img/quote.png" alt="quotesign" class="quotesign" width="50px">
 			<p class="quotetext">A leggyorsabb kiszállítás amit <br>valaha tapasztaltam!</p>
 			<p class="quoteby"> - egy elégedett vásárló</p>
+			<a href="contact.php" class="button2">RENDELJEN MOST</a>
 		</div>
 		<div class="inactivecontent3">
 			<h2>RENDEZVÉNY</h2><br>
 			<p class="titletext">RENDEZVÉNYT SZERVEZEL?</p><br>
 			<p style="width: 600px; margin: 0 auto;">Sed ultricies tristique metus porttitor aliquam. Donec id metus ac ante ullamcorper congue nec eu mauris. Ut in facilisis dolor, sed porttitor turpis. Ut ac nulla massa. Donec quis risus sodales, sagittis odio at, consequat tortor. Vivamus elementum mauris metus, id cursus nunc lacinia sit amet. Cras sit amet nulla ornare, mollis sem a, fermentum tellus. Aenean at condimentum est, vel aliquam massa. Suspendisse laoreet et ultricies velit, sed consectetur lacus scelerisque eget.</p><br>
 			<a href="contact.php" class="button1">KAPCSOLAT FELVÉTELE</a>
+		</div>
+		<div class="inactivecontent4">
+			<h2>SAJÁT PIZZA</h2><br>
+			<p class="titletext">CSINÁLD MAGAD</p><br>
+			<p style="width: 600px; margin: 0 auto;">Sed ultricies tristique metus porttitor aliquam. Donec id metus ac ante ullamcorper congue nec eu mauris. Ut in facilisis dolor, sed porttitor turpis. Ut ac nulla massa. Donec quis risus sodales, sagittis odio at, consequat tortor. Vivamus elementum mauris metus, id cursus nunc lacinia sit amet. Cras sit amet nulla ornare, mollis sem a, fermentum tellus. Aenean at condimentum est, vel aliquam massa. Suspendisse laoreet et ultricies velit, sed consectetur lacus scelerisque eget.</p><br>
+			<a href="contact.php" class="button1">ELKÉSZÍTEM A SAJÁTOM</a>
+		</div>
+		<div class="inactivecontent5">
+			<h2>MUTASD MEG</h2><br>
+			<p class="titletext">KÜLD EL A SAJÁT PIZZÁID</p><br>
+			<div class="images">
+				<img src="img/kep1.jpg" alt="pizza kep" width="205px">
+				<img src="img/kep2.jpg" alt="pizza kep" width="205px">
+				<img src="img/kep3.jpg" alt="pizza kep" width="205px">
+				<img src="img/kep4.jpg" alt="pizza kep" width="205px">
+			</div><br>
+			<p style="width: 800px; margin: 0 auto; text-align: center-justify;">Küld el a tőlünk rendelt pizzádról készült képeid és nyerj ár engedményeket a következő rendeléshez! Nincs más dolgod mint a kiválasztott képeket elküldened a rocketpizza@gmail.com e-mail címre és ha a kép elnyeri tetszésünket, máris jóváírjuk az engedményt a profilodban. A játék előtt kérjük olvasd el a feltételeinket.</p><br>
+			<a href="contact.php" class="button1">FELTÉTELEK</a>
 		</div>
 	<div class="footer">Doszkocs Zoltán 2017 All Rights Reserved</div>
 </div>
