@@ -12,52 +12,43 @@ $try=LoginCounter(getIP());?>
 <head>
 	<title>Rocket Pizza</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css">
 	<link rel="stylesheet" href="index.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.js"></script>
 </head>
 <body>
 <div class="wrapper">
 	<div class="title">
-		<img src="img/title.png" alt="rocketpizza" width="40%">
-		<img src="img/logo.png" alt="logo" class="logo" width="12%">
-		<img src="img/contact.png" alt="contact" class="contact">
+		<table style="color: white;">
+			<tr>
+				<td style="width: 35%;">
+					<img src="img/logo2.png" alt="logo" width="80%">
+				</td>
+				<td>
+					Ön nincs bejelentkezve. <br>
+					Ha még nem regisztrált, azt ITT megteheti.
+				</td>
+				<td style="text-align: right;">
+					Telefon: +381621082640 <br>
+					Cím: Ady Endre 44, Szabadka
+				</td>
+			</tr>
+		</table>
 	</div>
 	<div class="sitebody">
-		<div class="inactivecontent">
-			<?php 
-				if(isset($_SESSION['user_id']))
-				{
-					include ("menu.php");
-				}
-				else
-				{
-					echo '<form action="login.php" method="POST">
-							<label>Username: </label><input type="text" name="username" class="rp_input">
-							<label>Password: </label><input type="password" name="password" class="rp_password">
-							<input type="hidden" name="token" value="'.$token.'">
-							<input type="submit" value="Login"><br>
-						</form>';
-				}
-
-    			if(isset($_GET['error'])) 
-    			{
-					$x=$_GET['error'];
-					switch ($x) 
-					{
-						case 1:echo "<script>alert('Hibás felhasználónév vagy jelszó!');</script>";
-						break;
-						case 2:echo "<script>alert('Valami nincs rendben, próbáljon meg később bejelentkezni.');</script>";
-						break;
-						case 3:echo "<script>alert('Próbáljon meg bejelentkezni 10 perc múlva.');</script>";
-						break;
-        				case 4:echo "<script>alert('Kérem jelentkezzen be.');</script>";
-            			break;
-					}
-				}
-			?>
-			<img src="img/orderfast.png" alt="orderfast"><br><br>
-			<h4>LIST OF PIZZAS</h4>
-			<br><br><hr>
+		<ul>
+	  		<li><a href="index.php">Kezdőlap</a></li>
+	  		<li><a class="active" href="#">Étlap</a></li>
+	  		<li><a href="pizzamake.php">PizzaMaker</a></li>
+	  		<li><a href="contact.php">Elérhetőségek</a></li>
+	  		<li style="float: right"><a href="#"><i class="fas fa-sign-in-alt"></i>&nbsp;Bejelentkezés</a></li>
+		</ul>
+	</div>
+		<div class="sitebody2">
+				<h4>LIST OF PIZZAS</h4>
+				<br><br><hr>
 		</div>
 	<div class="footer">Doszkocs Zoltán 2017 All Rights Reserved</div>
 </div>

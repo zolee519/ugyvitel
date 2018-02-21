@@ -23,7 +23,8 @@ if(isset($_POST)){
     {
         $price = mysqli_real_escape_string($connection, trim($_POST['price']));
         $price = (int)$price;
-    }else
+    }
+    else
     {
         $price = '';
     }
@@ -88,7 +89,7 @@ if(isset($_POST)){
     else
     {
 
-        $query = "INSERT INTO `orders2`(`order_id`, `user_id`, `prilog`, `size`, `quantity`, `price`, `shipped`, `in_progress`) VALUES (order_id, $user_id, '$prilog2', '$size', $quantity, $price, 0, 0)";
+        $query = "INSERT INTO `orders2`(`order_id`, `user_id`, `prilog`, `size`, `quantity`, `price`, `shipped`, `in_progress`, `order_time`) VALUES (order_id, $user_id, '$prilog2', '$size', $quantity, $price, 0, 0, now())";
     }
 
     $result = mysqli_query($connection,$query);

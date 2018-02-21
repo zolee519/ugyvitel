@@ -31,6 +31,7 @@
         echo "<tr style='background-color: orange; color: white;'>";
       }
       $prilog_name = GetPrilogName($row['prilog']);
+      $prilog_name = implode(',',$prilog_name);
       echo "<td>".$prilog_name."</td>";
       echo "<td>" .$row['firstname'] ."</td>";
       echo "<td>" .$row['lastname'] ."</td>";
